@@ -16,18 +16,9 @@
   "dependencies": {
     "jquery": "~2.1.3",
     "jquery.cookie": "~1.4.1",
-    "ace-builds": "~1.1.8",
-    "jquery-ui": "~1.11.4",
-    "aMD": "https://github.com/anthon/aMD.git"
+    "jquery-ui": "~1.11.4"
   },
   "overrides": {
-    "ace-builds": {
-      "main": [
-        "src-noconflict/ace.js",
-        "src-noconflict/mode-php.js",
-        "src-noconflict/theme-monokai.js"
-      ]
-    },
     "jquery-ui": {
       "main": [
         "ui/core.js",

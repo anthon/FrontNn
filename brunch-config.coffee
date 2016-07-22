@@ -1,12 +1,17 @@
 exports.config =
 
+	npm:
+		enabled: false
+
 	modules:
 		definition: false
 		wrapper: false
 
 	conventions:
-		ignored = (path)->
-			not /^(.*\.md)$/.test(path) and not startsWith(sysPath.basename(path),'_')
+		ignored: [
+			/[\\/]_/,
+			/\-test.js$/
+		]
 
 	files:
 		javascripts:
@@ -26,11 +31,19 @@ exports.config =
 			joinTo: 'js/dontUseMe'
 
 	paths:
+		watched: [
+			'app',
+			'../../Nn',
+			'../../App'
+		]
 		public: '../../public'
 
 	sourceMaps: false
 
 	plugins:
+		babel:
+			presets: ['es2015','stage-0']
+			pattern: /\.(js)$/
 		uglify:
 			mangle: false
 			minify: false

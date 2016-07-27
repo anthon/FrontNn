@@ -34,7 +34,7 @@ exports.config =
 		watched: [
 			'app',
 			'../../Nn',
-			'../../App'
+			'../../bootstrap'
 		]
 		public: '../../public'
 

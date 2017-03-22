@@ -42,7 +42,7 @@ exports.config =
 
 	plugins:
 		babel:
-			presets: ['es2015','stage-0']
+			presets: ['es2015']
 			pattern: /\.(js)$/
 		uglify:
 			mangle: false
